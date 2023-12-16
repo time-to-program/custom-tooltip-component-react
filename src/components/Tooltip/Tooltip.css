@@ -1,0 +1,39 @@
+.tooltip-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tooltip {
+  width: 280px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d8e2e2;
+  position: absolute;
+  top: -55px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+  position: absolute;
+  bottom: -12px;
+  left: calc(50% - 12px);
+}
+
+.tooltip.open {
+ transform: translateY(-30px);
+ opacity: 1;
+}
